@@ -27,10 +27,10 @@ def label_gen(encoded_pixels):
 
 
 # Define a function that calculates the number of each label
-def calculate_label(input):
+def calculate_label(serial):
     has_ship = 0
     no_ship = 0
-    for n in input:
+    for n in serial:
         if n == '1':
             has_ship += 1
         else:
@@ -40,24 +40,25 @@ def calculate_label(input):
 
 
 # Define a function that visualizes the statistical data of labels
-def bar_chart(input, labels, title):
+def bar_chart(input_tuple, labels, title):
     # Generate figure
     plt.figure(0)
     # Add a title
     plt.suptitle(t=title)
     # Generate left side bar
-    plt.bar(x=0, height=input[0], width=50, color='YellowGreen', bottom=0, align='center', tick_label=labels[0][0])
+    plt.bar(x=0, height=input_tuple[0], width=50, color='YellowGreen', bottom=0, align='center', tick_label=labels[0][0])
     # Adding text to left side bar
-    plt.text(x=0, y=input[0], horizontalalignment='center', s=input[0])
+    plt.text(x=0, y=input_tuple[0], horizontalalignment='center', s=input_tuple[0])
     # Generate right side bar
-    plt.bar(x=100, height=input[1], width=50, color='IndianRed', bottom=0, align='center', tick_label=labels[0][1])
+    plt.bar(x=100, height=input_tuple[1], width=50, color='IndianRed', bottom=0, align='center', tick_label=labels[0][1])
     # Adding text to right side bar
-    plt.text(x=100, y=input[1], horizontalalignment='center', s=input[1])
+    plt.text(x=100, y=input_tuple[1], horizontalalignment='center', s=input_tuple[1])
     # Adding label to x-axis
     plt.xlabel("Status", color='b')
     # Adding label to y-axis
     plt.ylabel(labels[1], color='b')
     plt.show()
+    plt.savefig(DATASET_DIR + "Visualisation\\" + "Statistics of Sample.png")
 
 
 SAMPLE_SIZE = 100
@@ -86,6 +87,7 @@ with get_csv_file() as csv_file:
     items = csv_file
     print("File open success!")
 
+
 # Add a column to dataframe to store the directory of each image
 items['Directory'] = DATASET_DIR + "train_v2\\" + items['ImageId']
 
@@ -96,7 +98,7 @@ items = items.sample(n=SAMPLE_SIZE)
 items['HasShip'] = label_gen(items['EncodedPixels'].values)
 
 # Visualize results
-bar_chart(input=calculate_label(items['HasShip'].values),
+bar_chart(input_tuple=calculate_label(items['HasShip'].values),
           labels=[["HAVE SHIPS", "DON'T HAVE SHIPS"], "Number of images"],
           title="Statistics of Sample")
 
@@ -104,7 +106,7 @@ bar_chart(input=calculate_label(items['HasShip'].values),
 
 
 # Image pre-processing
-def image_augmentation(generator_config, input_dataframe, mode, batch_size):
+def image_augmentation(generator_config, input_dataframe, batch_size):
     prep_result = generator_config.flow_from_dataframe(
         dataframe=input_dataframe,
         directory=os.path.dirname(input_dataframe['Directory'].values[0]),
@@ -168,8 +170,8 @@ prep_train_generator = ImageDataGenerator(rescale=1./225, zoom_range=0.2, horizo
 prep_test_generator = ImageDataGenerator(rescale=1./225)
 
 # Execute image augmentation
-prep_train = image_augmentation(prep_train_generator, train, 'train', BATCH_SIZE)
-prep_test = image_augmentation(prep_test_generator, test, 'test', BATCH_SIZE)
+prep_train = image_augmentation(prep_train_generator, train, BATCH_SIZE)
+prep_test = image_augmentation(prep_test_generator, test, BATCH_SIZE)
 
 # Visualizing image augmentation effect
 sample = pd.read_csv(DATASET_DIR + 'Sample.csv')
@@ -177,4 +179,4 @@ sample['Directory'] = DATASET_DIR + sample['ImageId']
 sample['HasShip'] = label_gen(sample['EncodedPixels'].values)
 output_aug_images(prep_train_generator, prep_test_generator, sample)
 
-# END OF DataPrep.py
+# END OF DataPrep_CNNProto.py
