@@ -9,62 +9,36 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/ShipDetection$Debug.coverage" NAME="Debug Coverage Results" MODIFIED="1553665283506" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/ShipDetection$Initiate.coverage" NAME="Initiate Coverage Results" MODIFIED="1550999017271" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/ShipDetection$StartUp.coverage" NAME="Debug Coverage Results" MODIFIED="1553485256797" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-  </component>
-  <component name="FavoritesManager">
-    <favorites_list name="ShipDetection" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Debug.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="19">
-              <caret line="1" column="2" selection-start-line="1" selection-start-column="2" selection-end-line="1" selection-end-column="2" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Analysis/__init__.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="361">
-              <caret line="19" column="41" lean-forward="true" selection-start-line="19" selection-start-column="41" selection-end-line="19" selection-end-column="41" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Analysis/TrainingSetAnalysis.py">
+        <entry file="file://$PROJECT_DIR$/Initiate.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-361">
-              <caret line="11" column="38" selection-start-line="11" selection-start-column="38" selection-end-line="11" selection-end-column="38" />
+            <state relative-caret-position="171">
+              <caret line="9" column="15" lean-forward="true" selection-start-line="9" selection-start-column="15" selection-end-line="9" selection-end-column="15" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/DataPrep.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1425">
+              <caret line="75" column="32" lean-forward="true" selection-start-line="75" selection-start-column="32" selection-end-line="75" selection-end-column="32" />
               <folding>
-                <element signature="e#0#9#0" expanded="true" />
+                <element signature="e#34#53#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Analysis/TestSetAnalysis.py">
+        <entry file="file://$PROJECT_DIR$/Model.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="380">
-              <caret line="20" selection-start-line="20" selection-end-line="23" selection-end-column="36" />
-              <folding>
-                <element signature="e#0#22#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Models/CNNProto.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="361">
-              <caret line="19" column="20" selection-start-line="19" selection-start-column="20" selection-end-line="19" selection-end-column="20" />
+            <state relative-caret-position="456">
+              <caret line="24" column="57" selection-start-line="24" selection-start-column="45" selection-end-line="24" selection-end-column="57" />
               <folding>
                 <element signature="e#0#35#0" expanded="true" />
               </folding>
@@ -86,9 +60,6 @@
       <find>seg</find>
       <find>item</find>
       <find>sup</find>
-      <find>DESCRIPTOR</find>
-      <find>tensorflow.core.protobu</find>
-      <find>ImageFile</find>
     </findStrings>
   </component>
   <component name="IdeDocumentHistory">
@@ -102,88 +73,26 @@
         <option value="$PROJECT_DIR$/Evaluation.py" />
         <option value="$PROJECT_DIR$/DataPrep.py" />
         <option value="$PROJECT_DIR$/Initiate.py" />
-        <option value="$PROJECT_DIR$/DataAnalysis.py" />
-        <option value="$PROJECT_DIR$/TestSetAnalysis.py" />
-        <option value="$PROJECT_DIR$/TrainingSetAnalysis.py" />
-        <option value="$PROJECT_DIR$/Models/UNet.py" />
-        <option value="$PROJECT_DIR$/Evaluation/Evaluation.py" />
-        <option value="$PROJECT_DIR$/Models/__init__.py" />
-        <option value="$PROJECT_DIR$/StartUp.py" />
-        <option value="$PROJECT_DIR$/DataPrep/DataPrep_UNet.py" />
-        <option value="$PROJECT_DIR$/DataPrep/DataPrep-CNNProto.py" />
-        <option value="$PROJECT_DIR$/DataPrep/DataPrepCNNProto.py" />
-        <option value="$PROJECT_DIR$/DataPrep/DataPrep_CNNProto.py" />
-        <option value="$PROJECT_DIR$/DataPrep/__init__.py" />
-        <option value="$PROJECT_DIR$/Debug.py" />
-        <option value="$PROJECT_DIR$/Analysis/__init__.py" />
-        <option value="$PROJECT_DIR$/Analysis/TestSetAnalysis.py" />
-        <option value="$PROJECT_DIR$/Models/FastRCNN.py" />
-        <option value="$PROJECT_DIR$/Models/FasterRCNN.py" />
-        <option value="$PROJECT_DIR$/Analysis/TrainingSetAnalysis.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="185" />
-    <option name="y" value="-8" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="953" />
     <option name="width" value="974" />
-    <option name="height" value="1046" />
+    <option name="height" value="1167" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
-    <panes>
-      <pane id="Scope" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="ShipDetection" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ShipDetection" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ShipDetection" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ShipDetection" type="462c0819:PsiDirectoryNode" />
-              <item name="Analysis" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ShipDetection" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ShipDetection" type="462c0819:PsiDirectoryNode" />
-              <item name="DataPrep" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ShipDetection" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ShipDetection" type="462c0819:PsiDirectoryNode" />
-              <item name="Evaluation" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ShipDetection" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ShipDetection" type="462c0819:PsiDirectoryNode" />
-              <item name="Models" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-    </panes>
+    <panes />
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../EarlyTerm/ImageAnalysis/Analyser.py" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../TFLearning" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
-  </component>
-  <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="E:\Developing\ShipDetection\Analysis" />
-      <recent name="E:\Developing\ShipDetection\Evaluation" />
-      <recent name="E:\Developing\ShipDetection\Models" />
-      <recent name="E:\Developing\ShipDetection\DataPrep" />
-      <recent name="E:\Developing\ShipDetection" />
-    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -198,20 +107,20 @@
     </option>
   </component>
   <component name="RunManager">
-    <configuration name="Debug" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+    <configuration name="Initiate" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="ShipDetection" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="E:\Developing\KerasEnv\Scripts\python.exe" />
+      <option name="SDK_HOME" value="E:\Developing\TensorFlowEnv\Scripts\python.exe" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Debug.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Initiate.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -240,31 +149,11 @@
       <workItem from="1550885573585" duration="20691000" />
       <workItem from="1550937481348" duration="2450000" />
       <workItem from="1550972036795" duration="8030000" />
-      <workItem from="1552377799112" duration="1834000" />
-      <workItem from="1552444616216" duration="1198000" />
-      <workItem from="1552550662660" duration="411000" />
-      <workItem from="1552551096155" duration="51000" />
-      <workItem from="1552821503812" duration="601000" />
-      <workItem from="1552871136515" duration="4196000" />
-      <workItem from="1552964417449" duration="599000" />
-      <workItem from="1553046932235" duration="3567000" />
-      <workItem from="1553168166886" duration="2246000" />
-      <workItem from="1553244380405" duration="3032000" />
-      <workItem from="1553330193625" duration="8465000" />
-      <workItem from="1553416540987" duration="8854000" />
-      <workItem from="1553474770973" duration="11948000" />
-      <workItem from="1553489325697" duration="874000" />
-      <workItem from="1553492065128" duration="4634000" />
-      <workItem from="1553507181287" duration="1161000" />
-      <workItem from="1553508362971" duration="562000" />
-      <workItem from="1553509051244" duration="6940000" />
-      <workItem from="1553563262509" duration="13488000" />
-      <workItem from="1553647271173" duration="8488000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="164584000" />
+    <option name="totallyTimeSpent" value="81435000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -276,51 +165,51 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1176" extended-state="6" />
+    <frame x="953" y="0" width="974" height="1167" extended-state="0" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49598715" visible="true" weight="0.123667374" />
-      <window_info id="Structure" order="1" sideWeight="0.5040128" side_tool="true" weight="0.11513859" />
-      <window_info id="Favorites" order="2" sideWeight="0.5004794" side_tool="true" weight="0.114072494" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.33315566" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32885906" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4978678" weight="0.36720997" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32936078" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4989339" weight="0.32591876" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39761648" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.3279003" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32827735" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5021322" side_tool="true" weight="0.36720997" />
-      <window_info anchor="bottom" id="Python Console" order="11" sideWeight="0.4989339" weight="0.3279003" />
-      <window_info anchor="bottom" id="Terminal" order="12" sideWeight="0.49840087" weight="0.25886863" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5010661" side_tool="true" weight="0.32827735" />
+      <window_info anchor="bottom" id="Python Console" order="11" sideWeight="0.4989339" weight="0.32827735" />
+      <window_info anchor="bottom" id="Terminal" order="12" sideWeight="0.4989339" weight="0.29303676" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="SciView" order="3" weight="0.5271855" />
+      <window_info anchor="right" id="SciView" order="3" weight="0.5273523" />
       <window_info anchor="right" id="Database" order="4" />
     </layout>
     <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49598715" visible="true" weight="0.123667374" />
-      <window_info id="Structure" order="1" sideWeight="0.5040128" side_tool="true" weight="0.11513859" />
-      <window_info id="Favorites" order="2" sideWeight="0.5004794" side_tool="true" weight="0.114072494" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.33315566" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32885906" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4978678" weight="0.36720997" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39761648" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4989339" weight="0.3261105" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39824945" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.3279003" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32932165" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5021322" side_tool="true" weight="0.36720997" />
-      <window_info anchor="bottom" id="Python Console" order="11" sideWeight="0.4989339" weight="0.3279003" />
-      <window_info anchor="bottom" id="Terminal" order="12" sideWeight="0.49840087" weight="0.25886863" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5010661" side_tool="true" visible="true" weight="0.32827735" />
+      <window_info anchor="bottom" id="Python Console" order="11" sideWeight="0.4989339" weight="0.32827735" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="12" sideWeight="0.4989339" visible="true" weight="0.32827735" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="SciView" order="3" weight="0.5271855" />
+      <window_info anchor="right" id="SciView" order="3" weight="0.52771854" />
       <window_info anchor="right" id="Database" order="4" />
     </layout-to-restore>
   </component>
@@ -329,147 +218,50 @@
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/NetModel.py" />
-    <entry file="file://$PROJECT_DIR$/../TensorFlowEnv/Lib/site-packages/pandas/core/indexes/base.py" />
-    <entry file="file://$PROJECT_DIR$/../TensorFlowEnv/Lib/site-packages/keras/preprocessing/image.py" />
-    <entry file="file://$PROJECT_DIR$/Summary.py" />
-    <entry file="file://$PROJECT_DIR$/../ImageAnalysis/Analyser.py" />
-    <entry file="file://$PROJECT_DIR$/../TensorFlowEnv/Lib/site-packages/pandas/compat/__init__.py" />
-    <entry file="file://$PROJECT_DIR$/../TensorFlowEnv/Lib/site-packages/pandas/__init__.py" />
-    <entry file="file://$PROJECT_DIR$/../TensorFlowEnv/Lib/site-packages/setuptools/__init__.py" />
-    <entry file="file://$PROJECT_DIR$/../TensorFlowEnv/Lib/site-packages/pip/_vendor/urllib3/util/__init__.py" />
-    <entry file="file://$USER_HOME$/Downloads/setuptools-40.8.0/setuptools-40.8.0/setuptools/__init__.py" />
-    <entry file="file://$PROJECT_DIR$/Evaluation/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Evaluation/Evaluation.py">
+    <entry file="file://$PROJECT_DIR$/../TensorFlowEnv/Lib/site-packages/pandas/core/indexes/base.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="8" column="5" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
-          <folding>
-            <element signature="e#0#31#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="190">
+          <caret line="2657" selection-start-line="2657" selection-end-line="2657" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Models/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/packages.txt" />
-    <entry file="file://$PROJECT_DIR$/../KerasEnv/Lib/site-packages/keras/preprocessing/image.py">
+    <entry file="file://$PROJECT_DIR$/../TensorFlowEnv/Lib/site-packages/keras/preprocessing/image.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
+        <state relative-caret-position="-4168">
           <caret line="231" column="6" selection-start-line="231" selection-start-column="6" selection-end-line="231" selection-end-column="6" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DataPrep/DataPrep_RCNN.py">
+    <entry file="file://$PROJECT_DIR$/Evaluation.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/StartUp.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="798">
-          <caret line="42" column="53" selection-start-line="42" selection-start-column="28" selection-end-line="42" selection-end-column="53" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/Summary.py">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/ModelTraining.py">
+    <entry file="file://$PROJECT_DIR$/DataPrep.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="5" column="15" selection-start-line="5" selection-start-column="15" selection-end-line="5" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../TensorFlowEnv/Lib/site-packages/keras/__init__.py" />
-    <entry file="file://$PROJECT_DIR$/../TensorFlowEnv/Lib/site-packages/keras/utils/__init__.py" />
-    <entry file="file://$PROJECT_DIR$/../TensorFlowEnv/Lib/site-packages/keras/backend/__init__.py" />
-    <entry file="file://$PROJECT_DIR$/../TensorFlowEnv/Lib/site-packages/tensorflow/__init__.py" />
-    <entry file="file://$PROJECT_DIR$/../TensorFlowEnv/Lib/site-packages/tensorflow/python/__init__.py" />
-    <entry file="file://$PROJECT_DIR$/../TensorFlowEnv/Lib/site-packages/tensorflow/core/protobuf/meta_graph_pb2.py" />
-    <entry file="file://$PROJECT_DIR$/../TensorFlowEnv/Lib/site-packages/scipy/sparse/compressed.py" />
-    <entry file="file://$PROJECT_DIR$/DataPrep/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../EarlyTerm/ImageAnalysis/Analyser.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="10" selection-start-line="10" selection-end-line="11" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DataPrep/DataPrep_CNNProto.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1501">
-          <caret line="79" selection-start-line="79" selection-end-line="79" />
+        <state relative-caret-position="1425">
+          <caret line="75" column="32" lean-forward="true" selection-start-line="75" selection-start-column="32" selection-end-line="75" selection-end-column="32" />
           <folding>
             <element signature="e#34#53#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Models/RCNN.py">
+    <entry file="file://$PROJECT_DIR$/Model.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="5" selection-start-line="5" selection-end-line="5" />
+        <state relative-caret-position="456">
+          <caret line="24" column="57" selection-start-line="24" selection-start-column="45" selection-end-line="24" selection-end-column="57" />
           <folding>
             <element signature="e#0#35#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Models/FastRCNN.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Models/FasterRCNN.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Debug.py">
+    <entry file="file://$PROJECT_DIR$/Initiate.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="1" column="2" selection-start-line="1" selection-start-column="2" selection-end-line="1" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Analysis/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="19" column="41" lean-forward="true" selection-start-line="19" selection-start-column="41" selection-end-line="19" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Models/CNNProto.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="19" column="20" selection-start-line="19" selection-start-column="20" selection-end-line="19" selection-end-column="20" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Analysis/TestSetAnalysis.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="20" selection-start-line="20" selection-end-line="23" selection-end-column="36" />
-          <folding>
-            <element signature="e#0#22#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Analysis/TrainingSetAnalysis.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-361">
-          <caret line="11" column="38" selection-start-line="11" selection-start-column="38" selection-end-line="11" selection-end-column="38" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="171">
+          <caret line="9" column="15" lean-forward="true" selection-start-line="9" selection-start-column="15" selection-end-line="9" selection-end-column="15" />
         </state>
       </provider>
     </entry>
