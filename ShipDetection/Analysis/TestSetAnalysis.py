@@ -3,31 +3,38 @@ import csv
 import os
 import time
 
+# For avoiding bug of truncated image (occurred in 2019-1-9)
+from PIL import ImageFile
+ImageFile.LOAD_TRUNCATED_IMAGES = True
 
-# Define function for creating .csv file
+
+csv_head = ["FileName", "Shape", "Width", "Height", "#Channel", "#Pixel", "MaxPixel", "MinPixel", "AveragePixel",
+            "Type", "Extension", "Size"]
+
+
 def create_csv(name, path):
+
+    """This function is used for creating .csv file"""
+
     path = path + "\\" + name + ".csv"
     with open(path, 'w', newline='') as file:
         csv_write = csv.writer(file)
-        csv_head = ["FileName", "Shape",
-                    "Width", "Height", "#Channel",
-                    "#Pixel", "MaxPixel", "MinPixel", "AveragePixel",
-                    "Type", "Extension", "Size"]
         csv_write.writerow(csv_head)
     return path
 
 
-# Define function for logging .csv file
 def log_csv(path, data_row):
+
+    """This function is used for writing .csv file"""
+
     with open(path, 'a+', newline='') as file:
         csv_write = csv.writer(file)
         csv_write.writerow(data_row)
 
 
-# Define function for data analysis
 def analyser(csv_path, file_dir):
-    start_time_formatted = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
-    start_time = time.process_time()
+
+    """This function is used for data analysis"""
 
     for root, dirs, files in os.walk(file_dir):
         for item in files:
@@ -47,14 +54,6 @@ def analyser(csv_path, file_dir):
             img_attr.append(os.path.getsize(file_dir + "\\" + item))  # Size of image
             log_csv(csv_path, img_attr)  # Write to csv file
 
-    end_time = time.process_time()
-    end_time_formatted = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
-    time_length = end_time - start_time
-    exec_sum_header = ["Started at", "Finished at", "Executed time"]
-    exec_sum_data = [start_time_formatted, end_time_formatted, time_length]
-    log_csv(csv_path, exec_sum_header)
-    log_csv(csv_path, exec_sum_data)
-
 
 # Start of main section
 
@@ -62,5 +61,20 @@ def analyser(csv_path, file_dir):
 DATASET_FOLDER = "test_v2\\"
 DATASET_DIR = "E:\\Developing\\TrainingSet\\"
 
-test_csv = create_csv("test_set_analysis", DATASET_DIR)
+test_csv = create_csv("TestSetAnalysis", DATASET_DIR)
+
+# Start time
+t0_formatted = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
+t0 = time.process_time()
+
 analyser(test_csv, DATASET_DIR + DATASET_FOLDER)
+
+# End time
+t1 = time.process_time()
+t1_formatted = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
+time_length = t1 - t0
+
+# Time result
+print("Started at:" + t0_formatted + ".\n")
+print("Finished at:" + t1_formatted + ".\n")
+print("Cost time:" + str(time_length) + " seconds.")

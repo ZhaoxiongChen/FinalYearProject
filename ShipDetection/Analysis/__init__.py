@@ -1,4 +1,4 @@
-
+import SelectionValidation as sv
 '''
 # Debug: package step-in indicator
 print(__name__)
@@ -14,8 +14,14 @@ print(data_set_dir + training_set_postfix)
 print(data_set_dir + test_set_postfix)
 '''
 
-function_select = input("Please select the dataset to analyse (A Training/ B Test):")
+WELCOME_MESG = "Please select the dataset to analyse (A Training/ B Test):"
 MODULE_DICT = {"A": "TrainingSetAnalysis", "B": "TestSetAnalysis"}
+
+input_validation = sv.SelectionValidation(selection_dict=MODULE_DICT,
+                                          menu_message="",
+                                          welcome_message=WELCOME_MESG)
+function_select = input_validation.validation()
+
 
 while function_select not in MODULE_DICT:
     input("Invalid input, please input again(A for Training / B for Test):")

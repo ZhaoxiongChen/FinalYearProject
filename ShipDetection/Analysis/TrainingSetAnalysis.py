@@ -1,29 +1,17 @@
 import os
 # Calculating time consuming
 import time
-import pandas as pd
-
+import csv
 from skimage import io
-from PIL import Image
 
+import CSVUtil as csv_util
 
-class csv_open:
-    def __enter__(self):
-        return pd.read_csv(DATASET_DIR + DATASET_CSV)
-
-    def __exit__(self, exc_type, exc_val, exc_tb):
-        print("type:", exc_type)
-        print("value:", exc_val)
-        print("trace:", exc_tb)
-
-
-def get_csv_file():
-    return csv_open()
-
+# For avoiding bug of truncated image (occurred in 2019-1-9)
+from PIL import ImageFile
+ImageFile.LOAD_TRUNCATED_IMAGES = True
 
 df_attribute = ["ImageId",
                 "EncodedPixels",
-                "Shape",
                 "Width",
                 "Height",
                 "#Channel",
@@ -35,45 +23,60 @@ df_attribute = ["ImageId",
                 ]
 
 
-# Define function for data analysis
+def create_csv(path, name):
+    path = path + "\\" + name + ".csv"
+    with open(path, 'w', newline='') as file:
+        csv_write = csv.writer(file)
+        csv_write.writerow(df_attribute)
+    return path
 
-def image_analyser(input_df):
+
+# Define function for data analysis
+def image_analyser(input_df, input_csv_path):
     input_df['Directory'] = DATASET_DIR + DATASET_FOLDER + input_df['ImageId']
-    output_df = pd.DataFrame(data=None, columns=df_attribute)
     new_index = 0
     counter = 0
     last_milestone = 0
-    for index, row in input_df.iterrows():
-        if os.path.exists(row['Directory']):
-            stat = io.imread(row['Directory'])  # Open the image and convert into numpy ndarray
-            output_df.loc[new_index, 'ImageId'] = row['ImageId']
-            output_df.loc[new_index, 'EncodedPixels'] = row['EncodedPixels']
-            output_df.loc[new_index, 'Shape'] = stat.shape  # Shape
-            output_df.loc[new_index, 'Width'] = stat.shape[0]  # Width
-            output_df.loc[new_index, 'Height'] = stat.shape[1]  # Height
-            output_df.loc[new_index, '#Channel'] = stat.shape[2]  # Number of channels
-            output_df.loc[new_index, '#Pixel'] = stat.size  # Number of pixels
-            output_df.loc[new_index, 'MaxPixel'] = stat.max()  # Maximum pixel value
-            output_df.loc[new_index, 'MinPixel'] = stat.min()  # Minimum pixel value
-            output_df.loc[new_index, 'AveragePixel'] = stat.mean  # Average pixel value
-            output_df.loc[new_index, 'Directory'] = row['Directory']
 
-            # Memory saving
-            input_df.drop(index=index)
-            del stat
+    # Open csv file
+    with open(input_csv_path, 'a+', newline='') as file:
+        output_csv = csv.writer(file)
 
-        else:
-            print("\"" + row['ImageId'] + "\"" + " does not exist.")
-            counter += 1
+        # Iteration through dataframe rows
+        for index, row in input_df.iterrows():
+            if os.path.exists(row['Directory']):
+                try:
+                    img = io.imread(row['Directory'])  # Open the image and convert into numpy ndarray
+                    img_attr = []
+                    img_attr.append(row['ImageId'])
+                    img_attr.append(row['EncodedPixels'])
+                    img_attr.append(img.shape[0])  # Width
+                    img_attr.append(img.shape[1])  # Height
+                    img_attr.append(img.shape[2])  # Number of channels
+                    img_attr.append(img.size)  # Number of pixels
+                    img_attr.append(img.max())  # Maximum pixel value
+                    img_attr.append(img.min())  # Minimum pixel value
+                    img_attr.append(img.mean())  # Average pixel value
+                    img_attr.append(row['Directory'])
+                    output_csv.writerow(img_attr)
+                except(OSError, NameError):
+                    print("OSError: truncated images:" + row['ImageId'])
 
-        new_index += 1
+                # Memory saving
+                input_df.drop(index=index)
 
-        if new_index//1000 > last_milestone:
-            last_milestone = new_index//1000
-            print("Milestone of 1000 images: ", last_milestone)
+            else:
+                print("\"" + row['ImageId'] + "\"" + " does not exist.")
+                counter += 1
+
+            new_index += 1
+
+            if new_index//BATCH_SIZE > last_milestone:
+                last_milestone = new_index//BATCH_SIZE
+                print("Milestone of", BATCH_SIZE, "images: ", last_milestone)
 
     print(counter, " images are not founded according to csv.")
-    return output_df
+
 
 # Start of main section
 
@@ -82,25 +85,28 @@ def image_analyser(input_df):
 DATASET_FOLDER = "train_v2\\"
 DATASET_DIR = "E:\\Developing\\TrainingSet\\"
 DATASET_CSV = "train_ship_segmentations_v2.csv"
+BATCH_SIZE = 1000
 
-# Start time indicator
-start_time_formatted = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
-start_time = time.process_time()
+# Start time
+t0_formatted = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
+t0 = time.process_time()
 
 # Read csv and convert into data frame
-with get_csv_file() as csv_file:
+with csv_util.get_dataframe(DATASET_DIR, DATASET_CSV) as csv_file:
     training_df = csv_file
     print("File open success!")
 
-result_df = image_analyser(training_df)
-result_df.to_csv(DATASET_DIR + "Result.csv")
+file_name = "TrainingSetAnalysis"
 
-# End time indicator
-end_time = time.process_time()
-end_time_formatted = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
-time_length = end_time - start_time
+processed_csv = create_csv(DATASET_DIR, file_name)
+image_analyser(training_df, processed_csv)
 
-print("Started at:" + start_time_formatted + ".\n")
-print("Finished at:" + start_time_formatted + ".\n")
+# End time
+t1 = time.process_time()
+t1_formatted = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
+time_length = t1 - t0
+
+# Time result
+print("Started at:" + t0_formatted + ".\n")
+print("Finished at:" + t1_formatted + ".\n")
 print("Cost time:" + str(time_length) + " seconds.")
-
