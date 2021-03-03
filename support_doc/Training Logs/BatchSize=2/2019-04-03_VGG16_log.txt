@@ -1,0 +1,150 @@
+E:\Developing\KerasEnv\Scripts\python.exe E:/Developing/ShipDetection/StartUp.py
+========================================
+MENU
+1  Data Analysis
+2  Model Training
+3  Result Evaluation
+4  Demonstration
+5  EXIT
+========================================
+Please select the function of the application:2
+Executing "ModelsTraining" module.
+Using TensorFlow backend.
+File opening...
+File open success!
+type: None
+value: None
+trace: None
+
+Available scale of dataset:
+A  Sampled 50k images.
+B  Whole DataSet
+Please select or input:A
+
+Available model to train:
+CNNProto
+ResNet50
+VGG16
+VGG19
+Please select or input:VGG16
+Mode Sampled_50k have been selected.
+
+Since 25,000 original images will be used, data augmentation will be turned ON.
+Labeling CSV file: 100%|¨€¨€¨€¨€¨€¨€¨€¨€¨€¨€| 25000/25000 [00:00<00:00, 27725.74 items/s]
+Labeling CSV file: 100%|¨€¨€¨€¨€¨€¨€¨€¨€¨€¨€| 1/1 [00:00<00:00, 1000.31 items/s]
+Found 19242 images belonging to 2 classes.
+Found 4951 images belonging to 2 classes.
+Found 1 images belonging to 1 classes.
+Found 1 images belonging to 1 classes.
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+conv2d_1 (Conv2D)            (None, 224, 224, 64)      1792      
+_________________________________________________________________
+conv2d_2 (Conv2D)            (None, 224, 224, 64)      36928     
+_________________________________________________________________
+max_pooling2d_1 (MaxPooling2 (None, 112, 112, 64)      0         
+_________________________________________________________________
+conv2d_3 (Conv2D)            (None, 112, 112, 128)     73856     
+_________________________________________________________________
+conv2d_4 (Conv2D)            (None, 112, 112, 128)     147584    
+_________________________________________________________________
+max_pooling2d_2 (MaxPooling2 (None, 56, 56, 128)       0         
+_________________________________________________________________
+conv2d_5 (Conv2D)            (None, 56, 56, 256)       295168    
+_________________________________________________________________
+conv2d_6 (Conv2D)            (None, 56, 56, 256)       590080    
+_________________________________________________________________
+conv2d_7 (Conv2D)            (None, 56, 56, 256)       590080    
+_________________________________________________________________
+max_pooling2d_3 (MaxPooling2 (None, 28, 28, 256)       0         
+_________________________________________________________________
+conv2d_8 (Conv2D)            (None, 28, 28, 512)       1180160   
+_________________________________________________________________
+conv2d_9 (Conv2D)            (None, 28, 28, 512)       2359808   
+_________________________________________________________________
+conv2d_10 (Conv2D)           (None, 28, 28, 512)       2359808   
+_________________________________________________________________
+max_pooling2d_4 (MaxPooling2 (None, 14, 14, 512)       0         
+_________________________________________________________________
+conv2d_11 (Conv2D)           (None, 14, 14, 512)       2359808   
+_________________________________________________________________
+conv2d_12 (Conv2D)           (None, 14, 14, 512)       2359808   
+_________________________________________________________________
+conv2d_13 (Conv2D)           (None, 14, 14, 512)       2359808   
+_________________________________________________________________
+max_pooling2d_5 (MaxPooling2 (None, 7, 7, 512)         0         
+_________________________________________________________________
+flatten_1 (Flatten)          (None, 25088)             0         
+_________________________________________________________________
+dense_1 (Dense)              (None, 4096)              102764544 
+_________________________________________________________________
+dropout_1 (Dropout)          (None, 4096)              0         
+_________________________________________________________________
+dense_2 (Dense)              (None, 4096)              16781312  
+_________________________________________________________________
+dropout_2 (Dropout)          (None, 4096)              0         
+_________________________________________________________________
+dense_3 (Dense)              (None, 1)                 4097      
+=================================================================
+Total params: 134,264,641
+Trainable params: 134,264,641
+Non-trainable params: 0
+_________________________________________________________________
+Model training started at: 2019-04-03 09:54:08
+Epoch 1/20
+2019-04-03 09:54:09.512140: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2
+2019-04-03 09:54:09.886406: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1432] Found device 0 with properties: 
+name: GeForce GTX 1080 Ti major: 6 minor: 1 memoryClockRate(GHz): 1.683
+pciBusID: 0000:03:00.0
+totalMemory: 11.00GiB freeMemory: 9.11GiB
+2019-04-03 09:54:09.902155: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1511] Adding visible gpu devices: 0
+2019-04-03 09:54:14.104999: I tensorflow/core/common_runtime/gpu/gpu_device.cc:982] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-04-03 09:54:14.105477: I tensorflow/core/common_runtime/gpu/gpu_device.cc:988]      0 
+2019-04-03 09:54:14.105792: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1001] 0:   N 
+2019-04-03 09:54:14.210932: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 8799 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1080 Ti, pci bus id: 0000:03:00.0, compute capability: 6.1)
+ - 1364s - loss: 10.7563 - acc: 0.3253 - val_loss: 10.4284 - val_acc: 0.3459
+Epoch 2/20
+ - 968s - loss: 10.7308 - acc: 0.3269 - val_loss: 10.3997 - val_acc: 0.3477
+Epoch 3/20
+ - 969s - loss: 10.7428 - acc: 0.3261 - val_loss: 10.4475 - val_acc: 0.3447
+Epoch 4/20
+ - 967s - loss: 10.7523 - acc: 0.3256 - val_loss: 10.3295 - val_acc: 0.3521
+Epoch 5/20
+ - 966s - loss: 10.7802 - acc: 0.3238 - val_loss: 10.4858 - val_acc: 0.3423
+Epoch 6/20
+ - 965s - loss: 10.7117 - acc: 0.3281 - val_loss: 10.4252 - val_acc: 0.3461
+Epoch 7/20
+ - 965s - loss: 10.7396 - acc: 0.3263 - val_loss: 10.3519 - val_acc: 0.3507
+Epoch 8/20
+ - 966s - loss: 10.7396 - acc: 0.3263 - val_loss: 10.4507 - val_acc: 0.3445
+Epoch 9/20
+ - 968s - loss: 10.7763 - acc: 0.3241 - val_loss: 10.4093 - val_acc: 0.3471
+Epoch 10/20
+ - 967s - loss: 10.7029 - acc: 0.3286 - val_loss: 10.3869 - val_acc: 0.3485
+Epoch 11/20
+ - 966s - loss: 10.7500 - acc: 0.3257 - val_loss: 10.4507 - val_acc: 0.3445
+Epoch 12/20
+ - 969s - loss: 10.7587 - acc: 0.3251 - val_loss: 10.3582 - val_acc: 0.3503
+Epoch 13/20
+ - 966s - loss: 10.7364 - acc: 0.3266 - val_loss: 10.4539 - val_acc: 0.3443
+Epoch 14/20
+ - 966s - loss: 10.7324 - acc: 0.3268 - val_loss: 10.4635 - val_acc: 0.3437
+Epoch 15/20
+ - 965s - loss: 10.8034 - acc: 0.3223 - val_loss: 10.3869 - val_acc: 0.3485
+Epoch 16/20
+ - 969s - loss: 10.7316 - acc: 0.3268 - val_loss: 10.3646 - val_acc: 0.3499
+Epoch 17/20
+ - 967s - loss: 10.7189 - acc: 0.3276 - val_loss: 10.4188 - val_acc: 0.3465
+Epoch 18/20
+ - 967s - loss: 10.7356 - acc: 0.3266 - val_loss: 10.4125 - val_acc: 0.3469
+Epoch 19/20
+ - 965s - loss: 10.7372 - acc: 0.3265 - val_loss: 10.4539 - val_acc: 0.3443
+Epoch 20/20
+ - 964s - loss: 10.7555 - acc: 0.3254 - val_loss: 10.4029 - val_acc: 0.3475
+Training complete
+Model training finished at: 2019-04-03 15:22:58
+Model training time: 31185.359375
+Module "ModelsTraining" is finished.
+
+Process finished with exit code 0

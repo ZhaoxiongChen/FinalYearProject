@@ -1,0 +1,125 @@
+E:\Developing\KerasEnv\Scripts\python.exe E:/Developing/ShipDetection/Debug.py
+Using TensorFlow backend.
+File opening...
+File open success!
+type: None
+value: None
+trace: None
+
+Available scale of dataset:
+A  Sampled 50k images.
+B  Whole DataSet
+Please select a mode:A
+Mode Sampled_50k have been selected.
+
+Sample 50k will use 25,000 original images, data augmentation will be turned ON.
+Labeling CSV file: 100%|¨€¨€¨€¨€¨€¨€¨€¨€¨€¨€| 25000/25000 [00:00<00:00, 27973.72 items/s]
+              ImageId                                         Directory HasShip
+173731  bffd84904.jpg  E:\Developing\TrainingSet\train_v2\bffd84904.jpg       1
+163351  b45d37505.jpg  E:\Developing\TrainingSet\train_v2\b45d37505.jpg       0
+168245  b996a0db4.jpg  E:\Developing\TrainingSet\train_v2\b996a0db4.jpg       0
+91745   653699aee.jpg  E:\Developing\TrainingSet\train_v2\653699aee.jpg       0
+77566   55c684105.jpg  E:\Developing\TrainingSet\train_v2\55c684105.jpg       0
+              ImageId                                         Directory HasShip
+144396  9f65f9b33.jpg  E:\Developing\TrainingSet\train_v2\9f65f9b33.jpg       1
+198216  db46a4662.jpg  E:\Developing\TrainingSet\train_v2\db46a4662.jpg       0
+13604   0eec51b9e.jpg  E:\Developing\TrainingSet\train_v2\0eec51b9e.jpg       0
+53371   3b5086f4e.jpg  E:\Developing\TrainingSet\train_v2\3b5086f4e.jpg       1
+147779  a33cac3aa.jpg  E:\Developing\TrainingSet\train_v2\a33cac3aa.jpg       0
+Labeling CSV file: 100%|¨€¨€¨€¨€¨€¨€¨€¨€¨€¨€| 1/1 [00:00<00:00, 1000.31 items/s]
+Found 19242 images belonging to 2 classes.
+Found 4951 images belonging to 2 classes.
+Found 1 images belonging to 1 classes.
+Found 1 images belonging to 1 classes.
+
+Available model to train:
+CNN
+AlexNet
+ResNet
+VGG16
+VGG19
+VGG16PT
+AlexNetMod
+
+Please select a model:CNN
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+conv2d_1 (Conv2D)            (None, 254, 254, 32)      896       
+_________________________________________________________________
+max_pooling2d_1 (MaxPooling2 (None, 127, 127, 32)      0         
+_________________________________________________________________
+conv2d_2 (Conv2D)            (None, 125, 125, 32)      9248      
+_________________________________________________________________
+max_pooling2d_2 (MaxPooling2 (None, 62, 62, 32)        0         
+_________________________________________________________________
+conv2d_3 (Conv2D)            (None, 60, 60, 32)        9248      
+_________________________________________________________________
+max_pooling2d_3 (MaxPooling2 (None, 30, 30, 32)        0         
+_________________________________________________________________
+flatten_1 (Flatten)          (None, 28800)             0         
+_________________________________________________________________
+dense_1 (Dense)              (None, 128)               3686528   
+_________________________________________________________________
+dense_2 (Dense)              (None, 1)                 129       
+=================================================================
+Total params: 3,706,049
+Trainable params: 3,706,049
+Non-trainable params: 0
+_________________________________________________________________
+Model training started at: 2019-04-19 02:28:11
+Epoch 1/20
+2019-04-19 02:28:12.659063: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2
+2019-04-19 02:28:13.036454: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1432] Found device 0 with properties: 
+name: GeForce GTX 1080 Ti major: 6 minor: 1 memoryClockRate(GHz): 1.683
+pciBusID: 0000:03:00.0
+totalMemory: 11.00GiB freeMemory: 9.11GiB
+2019-04-19 02:28:13.049033: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1511] Adding visible gpu devices: 0
+2019-04-19 02:28:17.009504: I tensorflow/core/common_runtime/gpu/gpu_device.cc:982] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-04-19 02:28:17.009809: I tensorflow/core/common_runtime/gpu/gpu_device.cc:988]      0 
+2019-04-19 02:28:17.009990: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1001] 0:   N 
+2019-04-19 02:28:17.045849: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 8799 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1080 Ti, pci bus id: 0000:03:00.0, compute capability: 6.1)
+ - 1375s - loss: 0.5861 - acc: 0.6829 - val_loss: 0.4787 - val_acc: 0.7996
+Epoch 2/20
+ - 1006s - loss: 0.4704 - acc: 0.8038 - val_loss: 0.4292 - val_acc: 0.8190
+Epoch 3/20
+ - 1010s - loss: 0.4296 - acc: 0.8334 - val_loss: 0.4293 - val_acc: 0.8328
+Epoch 4/20
+ - 1004s - loss: 0.3825 - acc: 0.8530 - val_loss: 0.3622 - val_acc: 0.8498
+Epoch 5/20
+ - 1004s - loss: 0.3579 - acc: 0.8612 - val_loss: 0.3361 - val_acc: 0.8708
+Epoch 6/20
+ - 1004s - loss: 0.3544 - acc: 0.8642 - val_loss: 0.3765 - val_acc: 0.8508
+Epoch 7/20
+ - 1003s - loss: 0.3373 - acc: 0.8718 - val_loss: 0.3235 - val_acc: 0.8786
+Epoch 8/20
+ - 1004s - loss: 0.3378 - acc: 0.8736 - val_loss: 0.3374 - val_acc: 0.8760
+Epoch 9/20
+ - 1003s - loss: 0.3233 - acc: 0.8780 - val_loss: 0.3218 - val_acc: 0.8774
+Epoch 10/20
+ - 1004s - loss: 0.3144 - acc: 0.8823 - val_loss: 0.3057 - val_acc: 0.8840
+Epoch 11/20
+ - 1004s - loss: 0.3168 - acc: 0.8819 - val_loss: 0.3252 - val_acc: 0.8706
+Epoch 12/20
+ - 1004s - loss: 0.3044 - acc: 0.8864 - val_loss: 0.3494 - val_acc: 0.8710
+Epoch 13/20
+ - 1004s - loss: 0.3144 - acc: 0.8857 - val_loss: 0.3010 - val_acc: 0.8826
+Epoch 14/20
+ - 1003s - loss: 0.2970 - acc: 0.8935 - val_loss: 0.3306 - val_acc: 0.8928
+Epoch 15/20
+ - 1003s - loss: 0.3105 - acc: 0.8846 - val_loss: 0.3214 - val_acc: 0.8738
+Epoch 16/20
+ - 1005s - loss: 0.3066 - acc: 0.8878 - val_loss: 0.2894 - val_acc: 0.8864
+Epoch 17/20
+ - 1006s - loss: 0.3038 - acc: 0.8877 - val_loss: 0.3253 - val_acc: 0.8924
+Epoch 18/20
+ - 1006s - loss: 0.3037 - acc: 0.8889 - val_loss: 0.2906 - val_acc: 0.8852
+Epoch 19/20
+ - 1006s - loss: 0.2973 - acc: 0.8878 - val_loss: 0.3244 - val_acc: 0.8734
+Epoch 20/20
+ - 1005s - loss: 0.3014 - acc: 0.8898 - val_loss: 0.3180 - val_acc: 0.8926
+Training complete
+Model training finished at: 2019-04-19 08:09:16
+Model training time: 22478.203125
+
+Process finished with exit code 0

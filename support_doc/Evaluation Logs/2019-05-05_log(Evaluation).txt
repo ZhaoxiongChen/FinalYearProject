@@ -1,0 +1,23 @@
+========================================
+MENU
+1  Data Analysis
+2  Model Training
+3  Result Evaluation
+4  EXIT
+========================================
+
+Please select the function of the application:3
+Executing "Evaluation" module.
+Please input the directory of the trained model:E:\FYP\Model+History+Log\D BATCH=250
+Please input the prefix of the trained model.
+e.g. YYYY-MM-DD_nameOfModel:2019-04-30_CNNBenchmark
+Please input the directory to save generated figures:E:
+Successfully opened history.
+Please input image directory to predict:E:\Developing\TrainingSet\Prediction
+Possibility of ship existence in "00c04bea5.jpg" is: 0.0
+Possibility of ship existence in "00c9662ee.jpg" is: 3.374668e-38
+Possibility of ship existence in "00dc34840.jpg" is: 1.0
+Possibility of ship existence in "00e5fb033.jpg" is: 1.0
+Possibility of ship existence in "00e90efc3.jpg" is: 1.0
+Possibility of ship existence in "0ad121a1c.jpg" is: 0.0
+Module "Evaluation" is finished.
